@@ -1,23 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import React, { useState } from "react";
+import Board from "./Board.jsx";
 
 function App() {
+  const [board, setBoard] = useState([""]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="Wrap">
+      <Board key={1} className="White" />
+      {/* <button><img src= "../public/pnghut_chess-piece-queen-king-white-and-black-in-symbol.png" alt="HI"/></button> */}
     </div>
   );
 }
